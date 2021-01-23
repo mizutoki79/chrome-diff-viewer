@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "diff-viewer",
+    "version": "0.0.1",
+    "author": "mizutoki79",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["background.bundle.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "name": "diff-viewer"
+    }
+}
