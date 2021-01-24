@@ -3,9 +3,16 @@
     <head>
         <title>Diff Viewer</title>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
-        <div class="frame-containers"></div>
+        <div class="input-frame-container">
+            <iframe id="left" src="left.html"></iframe>
+            <iframe id="right" src="right.html"></iframe>
+        </div>
+        <div class="diff-frame-container">
+            <iframe id="diff" src="diff.html"></iframe>
+        </div>
     </body>
 </html>
