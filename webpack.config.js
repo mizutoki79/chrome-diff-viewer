@@ -8,7 +8,6 @@ module.exports = {
   mode: 'development',
   entry: {
     background: './src/ts/background.ts',
-    app: './src/ts/app.ts',
     leftEditor: './src/ts/leftEditor.ts',
     rightEditor: './src/ts/rightEditor.ts',
     diffEditor: './src/ts/diffEditor.ts',
