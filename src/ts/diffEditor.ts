@@ -7,6 +7,10 @@ let rightModel: monaco.editor.ITextModel = monaco.editor.createModel('');
 const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
     const target = document.getElementById(targetElementId);
     const editor = monaco.editor.createDiffEditor(target, editorOption);
+    const updateDiffOptions: monaco.editor.IDiffEditorOptions = {
+        readOnly: true,
+    };
+    editor.updateOptions(updateDiffOptions);
     window.onresize = () => editor.layout();
     return editor;
 };
