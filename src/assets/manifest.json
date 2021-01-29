@@ -1,16 +1,20 @@
 {
     "manifest_version": 2,
     "name": "diff-viewer",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "author": "mizutoki79",
-    "permissions": [
-        "tabs"
-    ],
+    "permissions": ["tabs"],
     "background": {
         "scripts": ["background.bundle.js"],
         "persistent": false
     },
     "browser_action": {
         "name": "diff-viewer"
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
     }
 }
