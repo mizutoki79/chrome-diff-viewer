@@ -3,7 +3,7 @@
     "name": "diff-viewer",
     "version": "0.1.0",
     "author": "mizutoki79",
-    "permissions": ["tabs"],
+    "permissions": [],
     "background": {
         "scripts": ["background.bundle.js"],
         "persistent": false
