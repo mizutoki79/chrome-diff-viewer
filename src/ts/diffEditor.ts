@@ -6,11 +6,15 @@ let rightModel: monaco.editor.ITextModel = monaco.editor.createModel('');
 
 const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
     const target = document.getElementById(targetElementId);
-    const editor = monaco.editor.createDiffEditor(target, editorOption);
-    const updateDiffOptions: monaco.editor.IDiffEditorOptions = {
+    const diffOptions: monaco.editor.IDiffEditorOptions = {
+        ...editorOption,
         readOnly: true,
+        renderIndicators: false,
+        renderMarginRevertIcon: false,
+        renderGutterMenu: false,
+        renderOverviewRuler: true,
     };
-    editor.updateOptions(updateDiffOptions);
+    const editor = monaco.editor.createDiffEditor(target, diffOptions);
     window.onresize = () => editor.layout();
     return editor;
 };
