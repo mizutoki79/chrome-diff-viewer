@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    background: './src/ts/background.ts',
+    serviceWorker: './src/ts/serviceWorker.ts',
     leftEditor: './src/ts/leftEditor.ts',
     rightEditor: './src/ts/rightEditor.ts',
     diffEditor: './src/ts/diffEditor.ts',

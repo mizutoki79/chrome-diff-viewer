@@ -1,14 +1,14 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "diff-viewer",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "mizutoki79",
     "permissions": [],
     "background": {
-        "scripts": ["background.bundle.js"],
-        "persistent": false
+        "service_worker": "serviceWorker.bundle.js",
+        "type": "module"
     },
-    "browser_action": {
+    "action": {
         "name": "diff-viewer"
     },
     "icons": {
