@@ -8,11 +8,12 @@ const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
     const target = document.getElementById(targetElementId);
     const diffOptions: monaco.editor.IDiffEditorOptions = {
         ...editorOption,
-        readOnly: true,
+        originalEditable: true,
+        renderGutterMenu: false,
         renderIndicators: false,
         renderMarginRevertIcon: false,
-        renderGutterMenu: false,
         renderOverviewRuler: true,
+        readOnly: false,
     };
     const editor = monaco.editor.createDiffEditor(target, diffOptions);
     window.onresize = () => editor.layout();

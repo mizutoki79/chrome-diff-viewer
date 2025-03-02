@@ -8,7 +8,7 @@ export const editorOption:
     | monaco.editor.IStandaloneEditorConstructionOptions
     | monaco.editor.IDiffEditorConstructionOptions = {
     theme: theme,
-    language: 'json',
+    language: 'plaintext',
 };
 
 export const setListener = (
