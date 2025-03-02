@@ -18,6 +18,7 @@ const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
 const reloadDiff = (diffEditor: monaco.editor.IStandaloneDiffEditor) => (ev: MessageEvent<Message>) => {
     console.log(ev.data);
     const { from, content } = ev.data;
+    const currentPosition = diffEditor.getPosition();
     switch (from) {
         case 'left':
             leftModel.setValue(content);
@@ -31,6 +32,7 @@ const reloadDiff = (diffEditor: monaco.editor.IStandaloneDiffEditor) => (ev: Mes
         modified: rightModel,
     };
     diffEditor.setModel(diffModel);
+    diffEditor.setPosition(currentPosition);
 };
 
 const main = () => {
