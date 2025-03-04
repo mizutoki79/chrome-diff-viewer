@@ -16,6 +16,10 @@ const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
         readOnly: false,
     };
     const editor = monaco.editor.createDiffEditor(target, diffOptions);
+    editor.setModel({
+        original: leftModel,
+        modified: rightModel,
+    });
     window.onresize = () => editor.layout();
     return editor;
 };

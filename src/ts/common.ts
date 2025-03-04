@@ -9,6 +9,7 @@ export const editorOption:
     | monaco.editor.IDiffEditorConstructionOptions = {
     theme: theme,
     language: 'plaintext',
+    inDiffEditor: true,
 };
 
 export const setListener = (
