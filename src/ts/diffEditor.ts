@@ -24,29 +24,8 @@ const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
     return editor;
 };
 
-const reloadDiff = (diffEditor: monaco.editor.IStandaloneDiffEditor) => (ev: MessageEvent<Message>) => {
-    console.log(ev.data);
-    const { from, content } = ev.data;
-    const currentPosition = diffEditor.getPosition();
-    switch (from) {
-        case 'left':
-            leftModel.setValue(content);
-            break;
-        case 'right':
-            rightModel.setValue(content);
-            break;
-    }
-    const diffModel: monaco.editor.IDiffEditorModel = {
-        original: leftModel,
-        modified: rightModel,
-    };
-    diffEditor.setModel(diffModel);
-    diffEditor.setPosition(currentPosition);
-};
-
 const main = () => {
     const diffEditor = createDiffEditor();
-    window.addEventListener('message', reloadDiff(diffEditor));
 };
 
 main();
