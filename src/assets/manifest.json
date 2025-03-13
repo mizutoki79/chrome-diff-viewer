@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "diff-viewer",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": "mizutoki79",
   "permissions": [],
   "background": {
