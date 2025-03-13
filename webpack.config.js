@@ -46,7 +46,7 @@ module.exports = {
     })
   ],
   output: {
-    hashFunction: "sha256",
+    hashFunction: 'sha256',
     globalObject: 'self',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
