@@ -8,7 +8,7 @@ export const targetElementId = 'container'
 export const editorOption:
   | monaco.editor.IStandaloneEditorConstructionOptions
   | monaco.editor.IDiffEditorConstructionOptions = {
-  theme: theme,
+  theme,
   language: 'plaintext',
   inDiffEditor: true
 }

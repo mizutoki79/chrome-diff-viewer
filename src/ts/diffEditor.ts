@@ -1,8 +1,8 @@
 import * as monaco from 'monaco-editor'
 import { targetElementId, editorOption } from './common'
 
-let leftModel: monaco.editor.ITextModel = monaco.editor.createModel('')
-let rightModel: monaco.editor.ITextModel = monaco.editor.createModel('')
+const leftModel: monaco.editor.ITextModel = monaco.editor.createModel('')
+const rightModel: monaco.editor.ITextModel = monaco.editor.createModel('')
 
 const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
   const target = document.getElementById(targetElementId)
@@ -25,7 +25,7 @@ const createDiffEditor = (): monaco.editor.IStandaloneDiffEditor => {
 }
 
 const main = () => {
-  const diffEditor = createDiffEditor()
+  createDiffEditor()
 }
 
 main()
