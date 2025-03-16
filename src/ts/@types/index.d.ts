@@ -1,6 +1,6 @@
-type EditorPosition = 'left' | 'right';
+type EditorPosition = 'left' | 'right'
 
 interface Message {
-    from: EditorPosition;
-    content: string;
+  from: EditorPosition
+  content: string
 }

@@ -8,8 +8,6 @@ module.exports = {
   mode: 'development',
   entry: {
     serviceWorker: './src/ts/serviceWorker.ts',
-    leftEditor: './src/ts/leftEditor.ts',
-    rightEditor: './src/ts/rightEditor.ts',
     diffEditor: './src/ts/diffEditor.ts',
     'editor.worker': 'monaco-editor/esm/vs/editor/editor.worker.js',
     'json.worker': 'monaco-editor/esm/vs/language/json/json.worker',
@@ -41,18 +39,6 @@ module.exports = {
       ]
     }),
     new HtmlWebpackPlugin({
-      filename: 'left.html',
-      template: 'src/ejs/inner.ejs',
-      inject: false,
-      templateParameters: { scriptName: 'leftEditor.bundle.js' }
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'right.html',
-      template: 'src/ejs/inner.ejs',
-      inject: false,
-      templateParameters: { scriptName: 'rightEditor.bundle.js' }
-    }),
-    new HtmlWebpackPlugin({
       filename: 'diff.html',
       template: 'src/ejs/inner.ejs',
       inject: false,
@@ -60,7 +46,7 @@ module.exports = {
     })
   ],
   output: {
-    hashFunction: "sha256",
+    hashFunction: 'sha256',
     globalObject: 'self',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')

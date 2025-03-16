@@ -4,7 +4,8 @@
   "description": "chrome extension",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./node_modules/webpack/bin/webpack.js --progress"
+    "build": "node ./node_modules/webpack/bin/webpack.js --progress",
+    "format": "npx eslint --fix & npx prettier . --write"
   },
   "keywords": [
     "diff",
@@ -16,13 +17,14 @@
   "author": "mizutoki79",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@types/chrome": "0.0.307",
     "@typescript-eslint/eslint-plugin": "^8.25.0",
     "@typescript-eslint/parser": "^8.25.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
-    "eslint": "^9.21.0",
+    "eslint": "^8.0.1",
     "eslint-config-prettier": "^10.0.2",
     "eslint-config-standard": "^17.1.0",
     "file-loader": "^6.2.0",
@@ -32,7 +34,8 @@
     "prettier-config-standard": "^7.0.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
-    "typescript": "^5.8.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.26.1",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1"
   }

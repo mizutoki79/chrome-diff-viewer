@@ -1,20 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "diff-viewer",
-    "version": "0.1.1",
-    "author": "mizutoki79",
-    "permissions": [],
-    "background": {
-        "service_worker": "serviceWorker.bundle.js",
-        "type": "module"
-    },
-    "action": {
-        "name": "diff-viewer"
-    },
-    "icons": {
-        "16": "images/icon16.png",
-        "32": "images/icon32.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-    }
+  "manifest_version": 3,
+  "name": "diff-viewer",
+  "version": "1.0.0",
+  "author": "mizutoki79",
+  "permissions": [],
+  "background": {
+    "service_worker": "serviceWorker.bundle.js",
+    "type": "module"
+  },
+  "action": {
+    "name": "diff-viewer"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
 }
